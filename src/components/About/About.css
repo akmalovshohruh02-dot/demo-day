@@ -1,0 +1,54 @@
+.about{
+    flex:1;
+    background:#181818;
+    color:white;
+    padding:30px;
+    border-radius:15px;
+}
+.about h1{
+    font-size:35px;
+}
+.line{
+    width:70px;
+    height:4px;
+    background:#00ff99;
+    margin:10px 0 20px;
+}
+.about p{
+    color:#bdbdbd;
+    line-height:28px;
+    margin-bottom:20px;
+}
+.contact-button{
+    display:inline-block;
+    padding:2px 25px;
+    background:#00ff99;
+    color:#111;
+    text-decoration:none;
+    border-radius:10px;
+    transition:.3s;
+}
+
+
+body.light-theme .about{
+    background:#ffffff;
+    color:#111;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+body.light-theme .about h1{
+    color:#111;
+}
+
+body.light-theme .about p{
+    color:#444;
+}
+
+body.light-theme .line{
+    background:#00c853;
+}
+
+body.light-theme .contact-button{
+    background:#00ff99;
+    color:#fff;
+}
