@@ -1,51 +1,33 @@
 import "./Services.css";
 import { FaLaptopCode, FaPaintBrush, FaRocket, FaCheckCircle } from "react-icons/fa";
 import { motion } from "framer-motion";
+import Reveal from "../Reveal/Reveal";
+
+const services = [
+  { Icon: FaLaptopCode, title: "Frontend", text: "React yordamida zamonaviy web saytlar yarataman." },
+  { Icon: FaPaintBrush, title: "Dizayn", text: "Chiroyli va foydalanuvchi uchun qulay UI yarataman." },
+  { Icon: FaCheckCircle, title: "Sifat", text: "Toza va tushunarli kod yozishga e'tibor beraman." },
+  { Icon: FaRocket, title: "Tezkorlik", text: "Loyihalarni belgilangan muddatda topshiraman." },
+];
 
 function Services() {
   return (
     <div className="services">
-      <h2>Men nimalar qila olaman</h2>
-      <div className="line"></div>
+      <Reveal direction="down">
+        <h2>Men nimalar qila olaman</h2>
+        <div className="line"></div>
+      </Reveal>
 
       <div className="service-grid">
-
-        <motion.div
-          className="service-card"
-          whileHover={{ scale: 1.05 }}
-        >
-          <FaLaptopCode className="service-icon" />
-          <h3>Frontend</h3>
-          <p>React yordamida zamonaviy web saytlar yarataman.</p>
-        </motion.div>
-
-        <motion.div
-          className="service-card"
-          whileHover={{ scale: 1.05 }}
-        >
-          <FaPaintBrush className="service-icon" />
-          <h3>Dizayn</h3>
-          <p>Chiroyli va foydalanuvchi uchun qulay UI yarataman.</p>
-        </motion.div>
-
-        <motion.div
-          className="service-card"
-          whileHover={{ scale: 1.05 }}
-        >
-          <FaCheckCircle className="service-icon" />
-          <h3>Sifat</h3>
-          <p>Toza va tushunarli kod yozishga e'tibor beraman.</p>
-        </motion.div>
-
-        <motion.div
-          className="service-card"
-          whileHover={{ scale: 1.05 }}
-        >
-          <FaRocket className="service-icon" />
-          <h3>Tezkorlik</h3>
-          <p>Loyihalarni belgilangan muddatda topshiraman.</p>
-        </motion.div>
-
+        {services.map(({ Icon, title, text }, i) => (
+          <Reveal key={title} direction="up" delay={i * 0.1}>
+            <motion.div className="service-card" whileHover={{ scale: 1.05 }}>
+              <Icon className="service-icon" />
+              <h3>{title}</h3>
+              <p>{text}</p>
+            </motion.div>
+          </Reveal>
+        ))}
       </div>
     </div>
   );

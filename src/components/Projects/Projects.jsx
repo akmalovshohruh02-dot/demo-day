@@ -1,5 +1,6 @@
 import "./Projects.css";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import Reveal from "../Reveal/Reveal";
 
 function Projects() {
   const projects = [
@@ -31,28 +32,36 @@ function Projects() {
 
   return (
     <section className="projects">
-      <h2>My Projects</h2>
+      <Reveal direction="down">
+        <h2>My Projects</h2>
+      </Reveal>
 
       <div className="project-grid">
-        {projects.map((project) => (
-          <div className="project-card" key={project.id}>
-            <img src={project.image} alt={project.title} />
+        {projects.map((project, i) => (
+          <Reveal
+            key={project.id}
+            direction={i % 2 === 0 ? "left" : "right"}
+            delay={i * 0.1}
+          >
+            <div className="project-card">
+              <img src={project.image} alt={project.title} />
 
-            <div className="project-content">
-              <h3>{project.title}</h3>
-              <p>{project.desc}</p>
+              <div className="project-content">
+                <h3>{project.title}</h3>
+                <p>{project.desc}</p>
 
-              <div className="buttons">
-                <a href={project.github} target="_blank" rel="noreferrer">
-                  <FaGithub /> GitHub
-                </a>
+                <div className="buttons">
+                  <a href={project.github} target="_blank" rel="noreferrer">
+                    <FaGithub /> GitHub
+                  </a>
 
-                <a href={project.demo} target="_blank" rel="noreferrer">
-                  <FaExternalLinkAlt /> Live Demo
-                </a>
+                  <a href={project.demo} target="_blank" rel="noreferrer">
+                    <FaExternalLinkAlt /> Live Demo
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
+          </Reveal>
         ))}
       </div>
     </section>

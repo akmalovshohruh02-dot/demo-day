@@ -2,30 +2,40 @@
     display:flex;
     gap:30px;
     padding:30px;
-    background:#111;
     min-height:100vh;
+    background:transparent;
 }
 .right{
     flex:1;
-    background:#222;
+    background:rgba(34,34,34,0.75);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
     border-radius:10px;
     padding:20px;
 }
-body.light-theme .home{
-    background:#f5f5f5;
-}
 body.light-theme .right{
-    background:#ffffff;
+    background:rgba(255,255,255,0.75);
     box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
 
+/* Planshet */
+@media (max-width: 1024px) {
+  .home{
+    gap: 20px;
+    padding: 24px;
+  }
+}
+
+/* Telefon */
 @media (max-width: 768px) {
   .home{
     flex-direction: column;
-    padding: 20px;
+    padding: 16px;
+    gap: 16px;
   }
 
   .right{
     width: 100%;
+    padding: 16px;
   }
 }

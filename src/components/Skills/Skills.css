@@ -16,7 +16,9 @@
     gap:20px;
 }
 .card{
-    background:#1b1b1b;
+    background:rgba(27,27,27,0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     height:110px;
     border-radius:12px;
     display:flex;
@@ -62,7 +64,7 @@ body.light-theme .underline{
 }
 
 body.light-theme .card{
-    background:#ffffff;
+    background:rgba(255,255,255,0.7);
     box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
 
@@ -71,8 +73,30 @@ body.light-theme .card:hover{
     box-shadow:0 0 15px rgba(0,200,83,0.4);
 }
 
+@media (max-width: 1024px){
+  .skill-box{
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
+  }
+  .card{
+    height:95px;
+  }
+  .icon{
+    font-size:46px;
+  }
+}
+
 @media (max-width:768px){
   .skill-box{
     grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media (max-width:480px){
+  .card{
+    height:80px;
+  }
+  .icon{
+    font-size:36px;
   }
 }

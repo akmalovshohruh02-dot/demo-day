@@ -1,7 +1,9 @@
 .navbar{
     width:95%;
     height:65px;
-    background:#1d1d27;
+    background:rgba(29,29,39,0.75);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -31,7 +33,7 @@
 }
 
 body.light-theme .navbar{
-    background:#ffffff;
+    background:rgba(255,255,255,0.75);
     box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
 
@@ -63,6 +65,18 @@ body.light-theme .nav-links a.active{
     cursor:pointer;
 }
 
+@media (max-width: 1024px){
+  .navbar{
+    padding:0 30px;
+  }
+  .nav-links{
+    gap:22px;
+  }
+  .nav-links a{
+    font-size:16px;
+  }
+}
+
 @media (max-width:768px){
   .navbar{
     flex-direction: column;
@@ -75,5 +89,18 @@ body.light-theme .nav-links a.active{
     gap:20px;
     flex-wrap:wrap;
     justify-content:center;
+  }
+}
+
+@media (max-width:480px){
+  .logo h2{
+    font-size:20px;
+  }
+  .nav-links a{
+    font-size:14px;
+  }
+  .theme-btn{
+    width:36px;
+    height:36px;
   }
 }

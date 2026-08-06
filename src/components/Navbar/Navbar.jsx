@@ -3,6 +3,7 @@ import { FaMoon } from "react-icons/fa";
 import { IoSunnyOutline } from "react-icons/io5";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { motion } from "framer-motion";
 
 function Navbar() {
   const [darkMode, setDarkMode] = useState(true);
@@ -14,7 +15,12 @@ function Navbar() {
   };
 
   return (
-    <nav className="navbar">
+    <motion.nav
+      className="navbar"
+      initial={{ opacity: 0, y: -40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+    >
       <div className="logo">
         <h2>SHOXRUX.UZ</h2>
       </div>
@@ -40,7 +46,7 @@ function Navbar() {
       <button onClick={changeTheme} className="theme-btn">
         {darkMode ? <IoSunnyOutline /> : <FaMoon />}
       </button>
-    </nav>
+    </motion.nav>
   );
 }
 

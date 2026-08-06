@@ -16,7 +16,9 @@
     gap:20px;
 }
 .service-card{
-    background:#1b1b1b;
+    background:rgba(27,27,27,0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding:20px;
     border-radius:12px;
     color:white;
@@ -46,7 +48,7 @@ body.light-theme .services .line{
 }
 
 body.light-theme .service-card{
-    background:#ffffff;
+    background:rgba(255,255,255,0.7);
     color:#111;
     box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
@@ -64,8 +66,30 @@ body.light-theme .service-card:hover{
     box-shadow:0 0 15px rgba(0,200,83,0.4);
 }
 
+@media (max-width: 1024px){
+  .service-grid{
+    gap:16px;
+  }
+  .service-card{
+    padding:16px;
+  }
+}
+
 @media (max-width:768px){
   .service-grid{
     grid-template-columns:1fr;
+  }
+}
+
+@media (max-width:480px){
+  .service-icon{
+    font-size:28px;
+  }
+  .service-card h3{
+    font-size:17px;
+  }
+  .service-card p{
+    font-size:14px;
+    line-height:22px;
   }
 }
