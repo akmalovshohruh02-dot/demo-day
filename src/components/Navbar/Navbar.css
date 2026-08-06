@@ -2,8 +2,8 @@
     width:95%;
     height:65px;
     background:rgba(29,29,39,0.75);
-    backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
     display:flex;
     justify-content:space-between;
     align-items:center;

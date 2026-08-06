@@ -17,8 +17,8 @@
 }
 .service-card{
     background:rgba(27,27,27,0.6);
-    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     padding:20px;
     border-radius:12px;
     color:white;

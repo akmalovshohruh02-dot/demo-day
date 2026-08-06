@@ -18,12 +18,12 @@ function Sidebar({ hideOnMobile = false }) {
       />
 
       <h2>SHOXRUX</h2>
-      <p>DASTURCHI</p>
+      <p>Veb-dasturchi</p>
 
       <div className="info">
         <p><a href="mailto:akmalovshoxrux02@gmail.com"><MdEmail /></a> akmalovshoxrux02@gmail.com</p>
         <p><a href="https://github.com/shohruh" target="_blank" rel="noreferrer"><FaGithub /></a> github.com/shohruh</p>
-        <p><a href="https://t.me/akmlv_sh" target="_blank" rel="noreferrer"><FaTelegramPlane /></a> @akmlv_sh</p>
+        <p><a href="https://t.me/akma1ov_Sh" target="_blank" rel="noreferrer"><FaTelegramPlane /></a> @akmlv_sh</p>
         <p><a href="tel:+998977451105"><FaPhone /></a> +998 (97) 745 11 05</p>
       </div>
       <a href="/CV.pdf" download className="cv-btn">Download CV</a>

@@ -12,8 +12,8 @@
 }
 .project-card{
     background:rgba(27,27,27,0.6);
-    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     border-radius:15px;
     overflow:hidden;
     transition:.3s;

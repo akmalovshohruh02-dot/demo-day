@@ -12,7 +12,7 @@ function Footer() {
 
         <div className="socials">
           <a href="https://github.com/shohruh" target="_blank" rel="noreferrer"><FaGithub /></a>
-          <a href="https://t.me/akmlv_sh" target="_blank" rel="noreferrer"><FaTelegram /></a>
+          <a href="https://t.me/akma1ov_Sh" target="_blank" rel="noreferrer"><FaTelegram /></a>
         </div>
 
         <small>© 2026 Barcha huquqlar himoyalangan.</small>
