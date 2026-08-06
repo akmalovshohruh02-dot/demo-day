@@ -1,23 +1,33 @@
 import "./Contacts.css";
 import { FaUser, FaEnvelope, FaComment } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 function Contact() {
   const form = useRef();
+  const [sending, setSending] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setSending(true);
 
-    emailjs.sendForm('service_v7ni4wd', 'template_lww6baf', form.current, 'ZQKU4Kwo1GMhUL7Ps')
-
-    .then(() => {
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        form.current,
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+      )
+      .then(() => {
         alert("Message sent successfully!");
-    })
-     .catch((error) => {
+        e.target.reset();
+      })
+      .catch((error) => {
         alert("Failed to send the message, please try again.");
-    });
-     e.target.reset();
+      })
+      .finally(() => {
+        setSending(false);
+      });
   };
 
   return (
@@ -46,7 +56,9 @@ function Contact() {
           ></textarea>
         </div>
 
-        <button type="submit">Send Message</button>
+        <button type="submit" disabled={sending}>
+          {sending ? "Yuborilmoqda..." : "Send Message"}
+        </button>
       </form>
     </section>
   );

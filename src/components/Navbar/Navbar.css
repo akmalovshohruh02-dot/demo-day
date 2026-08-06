@@ -25,6 +25,11 @@
     color:#3c46c8;
 }
 
+.nav-links a.active{
+    color:#00ff99;
+    font-weight:600;
+}
+
 body.light-theme .navbar{
     background:#ffffff;
     box-shadow:0 2px 10px rgba(0,0,0,0.1);
@@ -40,6 +45,10 @@ body.light-theme .nav-links a{
 
 body.light-theme .nav-links a:hover{
     color:#00ff99;
+}
+
+body.light-theme .nav-links a.active{
+    color:#3c46c8;
 }
 
 .theme-btn{

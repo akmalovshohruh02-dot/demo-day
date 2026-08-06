@@ -1,4 +1,4 @@
-import "./About.css";  
+import "./About.css";
 import { motion } from "framer-motion";
 
 function About() {
@@ -23,9 +23,9 @@ function About() {
         Mening maqsadim foydalanuvchilarga qulay va samarali veb-ilovalarni yaratishdir.
       </p>
 
-      <button><a href="https://wa.me/998977451105" className="contact-button ">
+      <a href="https://wa.me/998977451105" className="contact-button" target="_blank" rel="noreferrer">
         Bog'lanish
-      </a></button>
+      </a>
     </motion.div>
   );
 }
